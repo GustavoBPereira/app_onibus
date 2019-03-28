@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tabela senat</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='bootstrap.css') }}" />
+</head>
+<body>
+<div class="container mt-4">
+    <div class="container">
+        <h1 class="text-center">AUTO AVIAÇÃO LOTUS</h1>
+        <h2 class="text-center">Engenho velho X Av. Presidente Vargas</h2>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th><p class="text-center font-weight-bolder">IDA</p></th>
+                <th><p class="text-center font-weight-bolder">VOLTA</p></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in range(0,27) %}
+                <tr>
+                    <th scope="row"><p class="text-center font-weight-bolder">{{horarios1[c]}}</p></th>
+                    <th><p class="text-center font-weight-bolder">{{horarios2[c]}}</p></th>
+                </tr>
+            {% endfor %}
+            {% for hora in horarios2 %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    
+</body>
+</html>
